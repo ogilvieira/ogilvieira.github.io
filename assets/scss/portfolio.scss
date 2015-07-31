@@ -1,0 +1,173 @@
+.hero-portfolio {
+	width: 100%;
+	background-color: #fafafa;
+	overflow: hidden;
+	padding: 70px 0;
+	.hero-title {
+		color: #482447;
+		text-align: left;
+		i {
+			display: inline-block;
+			margin-top: -10px;
+			position: relative;
+			bottom: -10px;			
+		}
+	}
+	.cards {
+		overflow: hidden;
+	}
+	.card {
+		display: block;
+		color: inherit;
+		text-decoration: none;
+		width: 100%;
+		height: 410px;
+		overflow: hidden;
+		border-radius: 5px;
+		margin: 20px 0;
+		background: #FFF;
+		box-shadow: 0 0 5px rgba(0, 0, 0, .2);
+
+		-webkit-touch-callout: none;
+		-webkit-user-select: none;
+		-khtml-user-select: none;
+		-moz-user-select: none;
+		-ms-user-select: none;
+		user-select: none;
+
+		.figure {
+			width: 100%;
+			height: 200px;
+			background-color: #ccc;
+			position: relative;
+			overflow: hidden;
+			.image {
+				width: 100%;
+				height: 100%;
+				position: absolute;
+				top: 0;
+				left: 0;
+				z-index: 1;
+				background-size: cover;
+				background-repeat: no-repeat;
+				background-position: center center;
+			}
+			.shadow {
+				width: 100%;
+				height: 100%;
+				position: absolute;
+				top: 0;
+				left: 0;
+				z-index: 2;
+				background: rgba(0,0,0,0.6);
+				background: -moz-linear-gradient(top, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0) 100%);
+				background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(0,0,0,0.6)), color-stop(100%, rgba(0,0,0,0)));
+				background: -webkit-linear-gradient(top, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0) 100%);
+				background: -o-linear-gradient(top, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0) 100%);
+				background: -ms-linear-gradient(top, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0) 100%);
+				background: linear-gradient(to bottom, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0) 100%);
+				filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#000000', GradientType=0 );
+			}
+			.tags {
+				position: absolute;
+				width: 100%;
+				height: 100%;
+				top: 0;
+				left: 0;
+				z-index: 3;
+				text-align: right;
+				color: #FFF;
+				font-size: 18px;
+				box-sizing: border-box;
+				padding: 10px;
+				text-shadow: 1px 1px 1px rgba(0, 0, 0, .2);
+			}
+			.like {
+				cursor: default;
+				position: absolute;
+				width: 100%;
+				height: 50px;
+				bottom: 0;
+				left: 0;
+				z-index: 3;
+				text-align: left;
+				color: #FFF;
+				font-size: 18px;
+				box-sizing: border-box;
+				padding: 10px;
+				text-shadow: 1px 1px 1px rgba(0, 0, 0, .2);
+				i {
+					font-size: 32px;
+					float: left;
+					color: #fff;
+				}
+				span {
+					display: block;
+					float: left;
+					height: 32px;
+					line-height: 32px;
+					padding-left: 5px;
+					font-size: 14px;
+					font-weight: 100;
+				}
+			}
+		}
+		.description {
+			padding: 20px 10px 62px 10px;
+			font-weight: 100;
+			font-size: 16px;
+			line-height: 24px;
+			position: relative;
+			h2 {
+				color: #482447;
+				font-weight: 700;
+				font-size: 22px;
+				font-family: 'Ubuntu', sans-serif;
+			}
+			strong {
+				display: block;
+				font-weight: 400;
+				margin-top: 5px;
+			}
+			a.btn {
+				position: absolute;
+				bottom: 13px;
+				right: 10px;
+				display: inline-block;
+				padding: 0 20px;
+				height: 42px;
+				line-height: 38px;
+				border-radius: 5px;
+				background: #ccc;
+				text-transform: uppercase;
+				font-size: 14px;
+				font-weight: 700;
+				text-decoration: none;
+				background: #FFF;
+				border: 2px solid #482447;
+				color: #482447;
+				box-sizing: border-box;
+				&:hover {
+					background: #482447;
+					color: #FFF;
+				}
+			}
+		}
+	}
+}
+
+
+@media screen and (max-width: 720px) {
+	.hero-portfolio {
+		padding: 20px 0;
+	}
+	.hero-portfolio .hero-title {
+		text-align: center;
+		margin-bottom: 20px;
+		i {
+			display: block;
+			margin: 0 auto 20px auto;
+			float: none;
+		}
+	}
+}

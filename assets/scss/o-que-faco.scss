@@ -1,0 +1,137 @@
+.hero-o-que-faco {
+	overflow: hidden;
+	padding: 70px 0;
+	.hero-title {
+		color: #5db3ed;
+	}
+	hr {
+		border: 0;
+		border-top: 5px solid #5db3ed;
+		position: relative;
+		bottom: -16px;
+		margin-bottom: -5px
+	}
+	.item {
+		.icon {
+			background: #FFF;
+			display: block;
+			width: 36px;
+			height: 36px;
+			line-height: 32px;
+			text-align: center;
+			border: 2px solid #5db3ed;
+			border-radius: 100%;
+			color: #5db3ed;
+			overflow: hidden;
+			font-size: 22px;
+			box-sizing: border-box;
+			-webkit-transform: scale(1);
+			        transform: scale(1);
+			transition: .1s all linear;
+			overflow: hidden;
+			i {
+				position: relative;
+				top: -3px;
+			}
+		}
+		&:hover {
+			.icon {
+				-webkit-transform: scale(1.5);
+				        transform: scale(1.5);
+			}
+		}
+		h2 {
+			font-size: 24px;
+			color: #5db3ed;
+			font-family: 'Ubuntu', sans-serif;
+			font-weight: 700;
+			text-transform: uppercase;
+			margin: 15px 0;
+		}
+		.description {
+			font-size: 18px;
+			font-weight: 100;
+			line-height: 24px;
+			color: #abb3b8;
+		}
+	}
+}
+
+@media screen and (min-width: 720px) and (max-width: 960px){
+	.hero-o-que-faco .container-12 .grid-3 {
+		width: calc(100% - 20px);
+	}
+	.hero-o-que-faco .container-12 .items .grid-3 {
+		width: calc(33% - 20px);
+	}
+	.hero-o-que-faco .grid-9 {
+		width: calc( 100% - 20px);
+	}	
+	.hero-o-que-faco hr {
+		bottom: 0;
+		margin-bottom: 0;
+		margin-top: 20px;
+	}
+
+	.hero-o-que-faco {
+		padding: 20px 0;
+		text-align: center;
+		.item {
+			padding: 20px 0 0 0;
+			box-sizing: border-box;
+			.icon {
+				margin: 0 auto;
+			}
+			.description {
+				font-size: 16px;
+			}
+			&:hover .icon {
+				-webkit-transform: scale(1);
+				        transform: scale(1);
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 720px) {
+	.hero-o-que-faco {
+		padding: 20px 0;
+		.item {
+			padding: 20px 0;
+			.icon {
+				display: inline-block;
+				position: relative;
+				margin-right: 10px;
+				float: left;
+			}
+			&:hover .icon {
+				-webkit-transform: scale(1);
+				        transform: scale(1);
+			}
+			h2 {
+				width: calc( 100% - 46px);
+				float: left;
+				display: inline-block;
+				margin: 0;
+				line-height: 36px;
+				height: 36px;
+			}
+			.description {
+				margin: 10px 0;
+				float: left;
+				width: 100%;
+			}
+		}
+	}
+	.hero-o-que-faco .grid-9 {
+		display: none;
+	}
+}
+
+@media screen and (max-width: 480px) {
+	.hero-o-que-faco {
+		.items {
+			overflow: hidden;
+		}
+	}
+}

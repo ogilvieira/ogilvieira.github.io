@@ -1,0 +1,101 @@
+.hero-skills {
+	height: 250px;
+	background: #482447;
+	overflow: hidden;
+	.hero-title {
+		width: 360px;
+		float: left;
+		color: #FFF;
+		text-align: center;
+		padding: 60px 90px 60px 0;
+		height: 250px;
+		box-sizing: border-box;
+		background: url(../img/separator-skills.png) no-repeat top right;
+		background-size: 40px 250px;
+		i {
+			margin-bottom: 10px;
+			display: block;
+		}
+	}
+	.skills-list {
+		font-size: 72px;
+		color: #FFF;
+		font-weight: 700;
+		font-family: 'Ubuntu', sans-serif;
+		float: left;
+		height: 182px;
+		padding-left: 25px;
+		padding-top: 70px;
+		span {
+			display: inline-block;
+			&:after {
+				content: " ";
+				margin-top: 15px;
+				width: 100%;
+				height: 8px;
+				display: block;
+				background: #FFF;
+			}
+			&.cyan:after {background:#5db3ed;}
+			&.orange-light:after {background:#f39c12;}
+			&.yellow:after {background:#f1c40f;}
+			&.blue:after {background:#2980b9;}
+			&.orange:after {background:#d35400;}
+		}
+	}
+}
+
+@media screen and (max-width: 1200px){
+	.hero-skills .skills-list {
+		font-size: 48px;
+		padding-top: 90px;
+		height: 162px;
+	}
+}
+
+
+@media screen and (max-width: 980px){
+	.hero-skills {
+		height: auto;
+		padding: 20px 0;
+	}
+	.hero-skills .hero-title {
+		background: none;
+		padding: 0 0 0 0;
+		margin: 0 auto;
+		float: none;
+		height: auto;
+	}
+	.hero-skills .skills-list {
+		padding: 20px 0 20px 0;
+		height: 72px;
+		margin: 0 auto;
+		float: none;
+		text-align: center;
+	}
+}
+
+@media screen and (max-width: 720px) {
+	.hero-skills .skills-list {
+		font-size: 32px;
+		height: 55px;
+	}
+}
+
+@media screen and (max-width: 480px) {
+	.hero-skills .hero-title {
+		width: 300px;
+		font-size: 26px;
+		i {
+			font-size: 48px;
+		}
+	}
+	.hero-skills .skills-list {
+		font-size: 22px;
+		height: 50px;
+		padding: 20px 0 0 0;
+		span:after {
+			height: 5px;
+		}
+	}
+}
