@@ -1,18 +1,92 @@
 .hero {
 	width: 100%;
 	overflow: hidden;
-	background: url(../img/hero-one-bg.jpg);
-	background-position: top center;
+	background: transparent;
 	background-size: cover;
 	&.hero-intro {
+		position: relative;
 		.wrap {
 			position: relative;
 			width: 1180px;
+			margin: 0 auto;
+		}
+		.content {
+			width: 447px;
+			height: 241px;
+			position: absolute;
+			top: 50%;
+			left: 0;
+			margin-top: -(240px/2);
 		}
 		.site-title {
-			font-weight: 900;
-			font-size: 122px;
+			display: block;
 			text-transform: uppercase;
+			background: url(../img/site-title.png) no-repeat top center;
+			width: 447px;
+			height: 207px;
+			text-indent: -999px;
+			overflow: hidden;			
+		}
+		.site-subtitle {
+			text-transform: uppercase;
+			margin-top: 18px;
+			width: 447px;
+			height: 16px;
+			overflow: hidden;
+			text-indent: -999px;
+			background: url(../img/site-subtitle.png) no-repeat top right;
+		}
+		.btn-go-to-content {
+			@include resetbtn();
+			position: absolute;
+			bottom: 100px;
+			left: 50%;
+			width: 42px;
+			height: 42px;
+			font-size: 60px;
+			line-height: 42px;
+			margin-left: -21px;
+			background: transparent;
+			color: white;
 		}
 	}	
+}
+
+@media screen and (max-width: 1199px) {
+	.hero.hero-intro .wrap {
+		width: 960px;
+	}
+}
+
+@media screen and (max-width: 959px) {
+	.hero.hero-intro .wrap {
+		width: 720px;
+	}
+	.hero.hero-intro .btn-go-to-content {
+		bottom: 30px;
+	}
+}
+
+@media screen and (max-width: 719px) {
+	.hero.hero-intro .wrap {
+		width: 100%;
+		.content {
+			width: 100%;
+			height: (242px/2);
+			margin-top: -(242px/4);
+		}
+		.site-title {
+			width: (448px/2);
+			background-size: (448px/2) (208px/2);
+			height: (208px/2);
+			margin: 0 auto;
+		}
+		.site-subtitle {
+			width: (448px/2);
+			height: (16px/2);
+			background-size: (316px/2) (16px/2);
+			margin: 10px auto 0;
+			background-position: top right;
+		}
+	}
 }
