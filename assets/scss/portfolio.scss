@@ -102,18 +102,6 @@
 					font-weight: 300;					
 				}
 			}
-			&:hover {
-				&:before, .description {
-					opacity: 0;
-				}
-				.title {
-					top: -35px;
-				}
-				.image figure img {
-					-webkit-filter: grayscale(0);
-					filter: grayscale(0);
-				}
-			}
 		}
 	}
 }
@@ -131,6 +119,20 @@
 	}
 }
 
+@media screen and (min-width: 719px) {
+	.hero.hero-portfolio .work-list .work-item:hover {
+		&:before, .description {
+			opacity: 0;
+		}
+		.title {
+			top: -35px;
+		}
+		.image figure img {
+			-webkit-filter: grayscale(0);
+			filter: grayscale(0);
+		}
+	}
+}
 @media screen and (max-width: 719px) {
 	.hero.hero-portfolio .brand-icon {
 		width: calc(66px/2);
