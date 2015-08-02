@@ -74,7 +74,7 @@ APP.Works.include = function( nodes ){
 
 APP.Works.loadWorks = function() {
 	$.ajax({
-		url: './assets/json/work-list.json',
+		url: './assets/json/work-list.json.js',
 		type: 'post',
 		dataType: 'json'
 		// data: {param1: 'value1'},
