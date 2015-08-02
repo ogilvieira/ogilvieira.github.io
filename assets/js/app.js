@@ -7,9 +7,6 @@ APP._setup = function(){
 	APP.windowWidth = myWindow.width();
 	APP.windowHeight = myWindow.height();
 	APP.resizeHeroIntro();
-	
-	console.log("adasd");
-
 };
 
 APP.resizeHeroIntro = function() {
