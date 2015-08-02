@@ -111,6 +111,10 @@
 		width: 220px;
 		height: 220px;
 	}
+	.hero.hero-portfolio .work-list .work-item .description .collaboration {
+		font-size: 14px;
+	}
+
 }
 
 @media screen and (max-width: 959px) {
@@ -140,6 +144,10 @@
 		background-size: (66px/2) (100px/2);
 		margin-bottom: 30px;
 	}
+
+	.hero.hero-portfolio .work-list .work-item .description .collaboration {
+		font-size: 16px;
+	}	
 
 	.hero.hero-portfolio .work-list .work-item, .hero.hero-portfolio .work-list .work-item .image, .hero.hero-portfolio .work-list .work-item .image figure {
 		width: 280px;
