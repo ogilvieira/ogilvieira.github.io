@@ -25,68 +25,6 @@ APP.resizeHeroIntro = function() {
 	$('.wrap', hero).height( height );
 };
 
-APP.Works = {};
-
-APP.Works.template = function( params ) {
-	console.log( params );
-
-	var image 		= params.image || "",
-		link 		= params.link || "",
-		title 		= params.title || "",
-		collaboration = params.collaboration || "",
-		month_year	= params.month_year || "",
-		logo 		= params.logo || "";
-
-	var tpl = "<div class=\"grid-3\">";
-		tpl += "    <a href=\""+link+"\" class=\"work-item\">";
-		tpl += "        <div class=\"image\">";
-		tpl += "            <figure>";
-		tpl += "                <img src=\""+image+"\">";
-		tpl += "            </figure>";
-		tpl += "        </div>";
-		tpl += "        <div class=\"title\">";
-		tpl += "            "+title+"";
-		tpl += "        </div>";
-		tpl += "        <div class=\"description\">";
-		tpl += "            <span class=\"collaboration\">"+collaboration+"</span>";
-		tpl += "            <span class=\"month-year\">"+month_year+"</span>";
-		tpl += "        </div>";
-		tpl += "    </a>";
-		tpl += "</div>";
-
-
-		if( logo ) {
-			tpl.replace("<div class=\"title\">", "<div class=\"title\" style=\"background-image: url("+logo+")\">");
-		};
-
-		return tpl;
-};
-
-APP.Works.include = function( nodes ){
-	var nodeHtml = "";
-
-	$.each(nodes, function(key, val){
-		nodeHtml += APP.Works.template( { image : val.image, title : val.title, collaboration : val.collaboration, month_year : val.month_year, logo : val.logo });
-	});
-
-	$('.work-list .container-12').html( nodeHtml );
-};
-
-APP.Works.loadWorks = function() {
-	$.ajax({
-		url: './assets/json/work-list.json.js',
-		type: 'post',
-		dataType: 'json'
-		// data: {param1: 'value1'},
-	})
-	.done(function() {
-		console.log( "ok!" );
-	})
-	.always(function( result ) {
-		APP.Works.include( result );
-	});
-}();
-
 
 // listeners
 $(window).resize( function(){
