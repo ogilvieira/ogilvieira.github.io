@@ -132,6 +132,13 @@
 }
 
 @media screen and (max-width: 719px) {
+	.hero.hero-portfolio .brand-icon {
+		width: calc(66px/2);
+		height: (100px/2);
+		background-size: (66px/2) (100px/2);
+		margin-bottom: 40px;
+	}
+
 	.hero.hero-portfolio .work-list .work-item, .hero.hero-portfolio .work-list .work-item .image, .hero.hero-portfolio .work-list .work-item .image figure {
 		width: 280px;
 		height: 280px;
