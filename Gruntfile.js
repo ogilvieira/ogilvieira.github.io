@@ -9,15 +9,10 @@ module.exports = function(grunt) {
 
   var project_files = {
       javascript: [
-        '!./_site/public/assets/js/app.min.js',
-        './_site/public/assets/js/lib/jquery.js',
-        './_site/public/assets/js/lib/*.js',
-        './_site/public/assets/js/modules/*.js',
-        './_site/public/assets/js/app.js',
+        './assets/js/_src/**/*.js',
       ],
       stylesheet: [
         './_site/public/assets/css/vendor/**.css',
-        './_site/public/assets/css/main.css',
       ],
   };
 
