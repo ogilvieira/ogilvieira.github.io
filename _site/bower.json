@@ -1,5 +1,5 @@
 {
-  "name": "Gil Vieira's website",
+  "name": "ogilvieira-website",
   "description": "Gil Vieira's personal website",
   "main": "Gruntfile.js",
   "authors": [
@@ -8,11 +8,4 @@
   "license": "MIT",
   "homepage": "https://github.com/ogilvieira/ogilvieira.github.io",
   "private": true,
-  "ignore": [
-    "**/.*",
-    "node_modules",
-    "bower_components",
-    "test",
-    "tests"
-  ]
 }
