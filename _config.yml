@@ -29,7 +29,7 @@ github_username:  ogilvieira
 markdown: kramdown
 gems:
   - jekyll-feed
-exclude: 
+exclude:
   - Gemfile
   - Gemfile.lock
   - README.md

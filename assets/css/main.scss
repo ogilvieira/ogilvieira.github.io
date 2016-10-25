@@ -3,18 +3,16 @@
 @charset "utf-8";
 
 // vendor
-@import "_vendor/bootstrap";
 @import "_vendor/bourbon/bourbon";
-
-body { background: white; }
+@import "_vendor/custom-bootstrap";
 
 //core
-// @import "core/_typography";
-// @import "core/_colors";
+@import "_core/typography";
+@import "_core/colors";
 
 // layout
-// @import "layout/_structure";
-// @import "layout/_gdialog";
+@import "_layout/structure";
+// @import "_layout/gdialog";
 
 // modules
 // @import "modules/blocks/_main-header";
