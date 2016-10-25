@@ -41,7 +41,6 @@ GEM
     safe_yaml (1.0.4)
     sass (3.4.22)
     thor (0.19.1)
-    wdm (0.1.1)
 
 PLATFORMS
   ruby
@@ -51,10 +50,9 @@ DEPENDENCIES
   bourbon
   jekyll (= 3.3.0)
   jekyll-feed (~> 0.6)
-  wdm (>= 0.1.0)
 
 RUBY VERSION
-   ruby 2.2.3p173
+   ruby 2.0.0p648
 
 BUNDLED WITH
-   1.13.4
+   1.13.6
