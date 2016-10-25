@@ -3,3 +3,5 @@ _vendor/
 _site/
 _build/
 .sass-cache/
+*.DS_Store
+.DS_Store
