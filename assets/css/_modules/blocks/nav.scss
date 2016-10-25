@@ -1,0 +1,106 @@
+#nav {
+  position: static;
+  width: 100%;
+  background: white;
+  padding: 5px 0;
+  margin-top: -50px;
+  &.is-active {
+    position: fixed;
+    top: 0;
+    left: 0;
+    margin-top: 0;
+    z-index: 999;
+  }
+  .brand {
+    display: block;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+    text-indent: -999px;
+    background: $color-primary;
+    float: left;
+  }
+  .btn-menu {
+    @include appearance(none);
+    height: 40px;
+    width: 40px;
+    line-height: 40px;
+    display: block;
+    float: right;
+    background: #f7f7f7;
+    border: 0;
+    outline: none;
+    font-size: 30px;
+    color: $color-primary;
+    border-radius: 3px;
+    padding: 0;
+    margin: 0;
+  }
+  ul {
+    display: block;
+    height: 50px;
+    padding: 0;
+    list-style: none;
+    margin: 0;
+    li {
+      display: inline-block;
+      a {
+        display: block;
+        height: 30px;
+        line-height: 30px;
+        margin: 10px 0;
+        @include transition(.3s all linear);
+        &:hover {
+          text-decoration: none;
+          @include transition(.1s all linear);
+        }
+      }
+    }
+  }
+  .menu {
+    width: calc( 100% - 50px );
+    height: 50px;
+    overflow: hidden;
+    padding-left: 30px;
+    .toplinks {
+      float: left;
+      li a {
+        border-radius: 3px;
+        background: transparent;
+        padding: 0 10px;
+        color: #bababa;
+        text-transform: lowercase;
+        &:hover, &:focus {
+          background: #efefef;
+          color: $textcolor-primary;
+        }
+      }
+    }
+    .social {
+      float: right;
+      li a {
+        width: 30px;
+        overflow: hidden;
+        text-align: center;
+        background: $color-secondary;
+        border-radius: 100%;
+        color: white;
+        &:hover {
+          background: darken($color-secondary, 10%);
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 767px){
+  #nav {
+    margin-top: -40px;
+  }
+  #nav .menu { display: none; }
+  #nav .brand {
+    width: 40px;
+    height: 40px;
+  }
+}

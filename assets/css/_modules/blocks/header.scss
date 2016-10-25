@@ -1,0 +1,70 @@
+#header {
+  width: 100%;
+  height: 520px;
+  margin-bottom: 50px;
+  background: url(../img/header.jpg) darken($color-primary, 20%) no-repeat;
+  @include clearfix();
+  color: white;
+  text-align: right;
+  font-size: 10px;
+  overflow: hidden;
+  h1 {
+    font-size: 13.5em;
+    line-height: 1;
+    margin: 0;
+    font-weight: 700;
+    display: block;
+    text-transform: lowercase;
+    color: $color-secondary;
+  }
+  p {
+    margin: 0;
+    font-family: $font-secondary;
+    font-style: italic;
+    font-size: 3em;
+  }
+  .description {
+    padding-right: 520px;
+    position: relative;
+    z-index: 1;
+  }
+  .valign {
+    height: 520px;
+    display: table-cell;
+    vertical-align: middle;
+  }
+  .avatar {
+    position: relative;
+    top: -520px;
+    width: 100%;
+    height: 520px;
+    z-index: 0;
+    background: url(../img/avatar.png) no-repeat bottom right;
+  }
+}
+
+
+@media screen and (max-width: 1199px){
+  #header { font-size: 8px; height: 480px;}
+  #header .valign { height: 480px;}
+  #header .description { height: 480px; padding-right: 400px;}
+  #header .avatar { background-size: 460px auto; height: 480px; top: -480px;}
+}
+
+@media screen and (max-width: 991px){
+  #header { font-size: 7px; height: 250px;}
+  #header .valign { height: 250px;}
+  #header .description { height: 250px; padding-right: 240px;}
+  #header .avatar { background-size: 227px auto; height: 250px; top: -250px;}
+}
+
+@media screen and (max-width: 767px){
+  #header { font-size: 7px; height: auto; text-align: center; margin-bottom: 40px; }
+  #header .valign { height: auto; display: block; padding: 30px 0;}
+  #header .description { height: auto; padding-right: 0;}
+  #header .avatar { background-size: 227px auto; height: 220px; top: auto; background-position: center bottom; }
+}
+
+@media screen and (max-width: 479px){
+  #header { font-size: 4px; background-size: 50% auto; }
+}

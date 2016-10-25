@@ -1,5 +1,5 @@
 node_modules/
-_vendor/
+./_vendor/
 _site/
 _build/
 .sass-cache/

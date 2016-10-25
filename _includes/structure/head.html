@@ -18,10 +18,12 @@
   <!--Favicon-->
 	<link rel="shortcut icon" href="{{ "/favicon.png" | prepend: site.url }}">
   <meta name="theme-color" content="#3e3977">
-
   <!-- Google Analytics -->
-	{% if site.google_analytics %}
-		{% include vendor/ga.html %}
-	{% endif %}
+  {% if site.google_analytics %}
+    {% include vendor/ga.html %}
+  {% endif %}
 
+  <style>
+    @import 'https://fonts.googleapis.com/css?family=Ubuntu:400,700';
+  </style>
 </head>
