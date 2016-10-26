@@ -1,0 +1,6 @@
+{
+  "file" : [
+    "/bower_components/zepto/zepto.js",
+    "/assets/js/app.js"
+  ]
+}
