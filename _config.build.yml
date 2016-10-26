@@ -19,7 +19,7 @@ description: "Desenvolvedor web, front-end & web design"
 baseurl: "" # the subpath of your site, e.g. /blog
 baseassets: "/assets/"
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
-production: false
+production: true
 
 # Build settings
 markdown: kramdown

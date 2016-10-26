@@ -1,5 +1,6 @@
 {
   "file" : [
-    "main.css"
+    "/bower_components/Ionicons/css/ionicons.css",
+    "/assets/css/main.css"
   ]
 }

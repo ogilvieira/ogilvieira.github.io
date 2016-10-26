@@ -1,20 +1,16 @@
 module.exports = function(grunt) {
-  var vendor_files = {
-      javascript: [
-        './_vendor/jquery/jquery.slim.js',
-      ],
-      stylesheet: [],
+
+  var javascript = grunt.file.readJSON('_data/assets/javascript.json').file,
+      stylesheet = grunt.file.readJSON('_data/assets/stylesheet.json').file
+  ;
+
+  function addPath(item, index){
+    var r = "_site"+item;
+    return r;
   };
 
-
-  var project_files = {
-      javascript: [
-        './assets/js/_src/**/*.js',
-      ],
-      stylesheet: [
-        './_site/public/assets/css/vendor/**.css',
-      ],
-  };
+  javascript = javascript.map(addPath);
+  stylesheet = stylesheet.map(addPath);
 
   // Project configuration.
   grunt.initConfig({
@@ -28,8 +24,8 @@ module.exports = function(grunt) {
                 +'=====================================================*/\n'
       },
       build: {
-        src: project_files.javascript,
-        dest: './_site/public/assets/js/app.min.js'
+        src: javascript,
+        dest: './_site/assets/js/app.min.js'
       },
     },
     cssmin : {
@@ -43,44 +39,45 @@ module.exports = function(grunt) {
                 +'=====================================================*/\n'
       },
       dist: {
-        src: project_files.stylesheet,
-        dest: './_site/public/assets/css/app.min.css',
+        src: stylesheet,
+        dest: './_site/assets/css/app.min.css',
       }
     },
-    htmlmin: {
-      options: {
-        removeComments: true,
-        collapseWhitespace: true
-      },
-      dist: {
-        src: '_site/public/index.html',
-        dest: '_site/public/index.min.html',
-      }
-    },
-     processhtml: {
-      options: {
-         process: true,
-       },
-      dist: {
-        src: '_site/public/index.min.html',
-        dest: '_site/public/index.html',
-      }
-     },
     imagemin: {                          // Task
       dynamic: {                         // Another target
         files: [{
           expand: true,                  // Enable dynamic expansion
-          cwd: '_site/public/assets/img/',                   // Src matches are relative to this path
-          src: ['**/*.{png,jpg,gif}'],   // Actual patterns to match
-          dest: '_site/public/assets/img/'                  // Destination path prefix
+          cwd: '_site/assets/img/',                   // Src matches are relative to this path
+          src: ['**/*.{png,jpg,gif}']   // Actual patterns to match
         }]
       }
+    },
+    htmlmin: {
+      dynamic: {
+        options: {
+          removeComments: true,
+          collapseWhitespace: true
+        },
+        files: [{
+          expand: true,
+          cwd: '_site/',
+          src: ['**/*.html'],
+          dest: "_site/"
+        }]
+      }
+    },
+    clean: {
+      js: javascript,
+      css: stylesheet,
+      folder: '_site/bower_components'
     }
   });
 
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-cssmin');
+  grunt.loadNpmTasks('grunt-contrib-imagemin');
   grunt.loadNpmTasks('grunt-contrib-htmlmin');
+  grunt.loadNpmTasks('grunt-contrib-clean');
 
-  grunt.registerTask('default', ['uglify', 'cssmin', 'htmlmin', 'processhtml', 'imagemin']);
+  grunt.registerTask('default', ['uglify', 'cssmin', 'htmlmin','imagemin', 'clean']);
 };
