@@ -10,6 +10,17 @@
   </div>
   {% include structure/footer.html %}
 </body>
-	<link rel="stylesheet" href="{{ "css/main.css" | prepend: site.baseassets }}">
-	<script src="{{ "js/app.min.js" | prepend: site.baseassets }}"></script>
+
+  {% if site.production == false %}
+  {% for file in site.data.assets.stylesheet.file %}
+    <link rel="stylesheet" href="{{ file }}">
+  {% endfor %}
+  {% for file in site.data.assets.javascript.file %}
+  <script src="{{ file }}"></script>
+  {% endfor %}
+  {% else %}
+  <link rel="stylesheet" href="{{ "css/app.min.css" | prepend: site.baseassets }}" media="none" onload="if(media!='all')media='all'">
+  <noscript><link rel="stylesheet" href="{{ "css/app.min.css" | prepend: site.baseassets }}" media="all"></noscript>
+  <script type="{{ "js/app.min.js" | prepend: site.baseassets }}"></script>
+  {% endif %}
 </html>
