@@ -36,7 +36,7 @@ exclude:
   - node_modules
   - Gruntfile.js
   - package.json
-  - bower.jso"
+  - bower.json
 
 # Sass configuration
 sass:
