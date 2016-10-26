@@ -49,7 +49,7 @@ module.exports = function(grunt) {
           expand: true,
           cwd: '_site/assets/img/',
           src: ['**/*.{png,jpg,gif}'],
-          dest: "_site/"
+          dest: "_site/assets/img/"
         }]
       }
     },
@@ -71,6 +71,16 @@ module.exports = function(grunt) {
       js: javascript,
       css: stylesheet,
       folder: '_site/bower_components'
+    },
+    copy: {
+      fonts: {
+        files: [{
+          expand: true,
+          cwd: '_site/bower_components/Ionicons/fonts/',
+          src: '**',
+          dest: '_site/assets/fonts/'
+        }]
+      }
     }
   });
 
@@ -79,6 +89,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-imagemin');
   grunt.loadNpmTasks('grunt-contrib-htmlmin');
   grunt.loadNpmTasks('grunt-contrib-clean');
+  grunt.loadNpmTasks('grunt-contrib-copy');
 
-  grunt.registerTask('default', ['uglify', 'cssmin', 'htmlmin','imagemin', 'clean']);
+  grunt.registerTask('default', ['uglify', 'cssmin', 'htmlmin','imagemin', 'copy', 'clean']);
 };
