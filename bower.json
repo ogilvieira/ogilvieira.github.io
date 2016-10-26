@@ -7,5 +7,9 @@
   ],
   "license": "MIT",
   "homepage": "https://github.com/ogilvieira/ogilvieira.github.io",
-  "private": true
+  "private": true,
+  "devDependencies": {
+    "zepto": "^1.1.6",
+    "Ionicons": "ionicons#^2.0.1"
+  }
 }

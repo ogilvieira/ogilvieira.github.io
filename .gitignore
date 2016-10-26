@@ -5,3 +5,4 @@ _build/
 .sass-cache/
 *.DS_Store
 .DS_Store
+bower_components/
