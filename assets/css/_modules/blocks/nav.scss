@@ -71,7 +71,7 @@
         padding: 0 10px;
         color: #bababa;
         text-transform: lowercase;
-        &:hover, &:focus {
+        &:hover, &:focus, &.active {
           background: #efefef;
           color: $textcolor-primary;
         }
@@ -138,7 +138,7 @@
         line-height: 1em;
         margin: 30px 0;
         height: auto;
-        &:hover, &:active, &:focus {
+        &:hover, &:focus, &.active {
           background: inherit;
         }
       }

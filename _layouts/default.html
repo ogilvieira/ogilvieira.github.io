@@ -3,7 +3,11 @@
   {% include structure/head.html %}
 <body class="is-loading">
   <div class="pageloading"></div>
+  {% if page.domain != 'home' %}
   {% include structure/header.html %}
+  {% else %}
+  {% include structure/header-home.html %}
+  {% endif %}
   {% include structure/nav.html %}
   <div id="content">
   {{ content }}

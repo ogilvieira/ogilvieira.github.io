@@ -4,8 +4,44 @@
   @include clearfix();
   overflow: hidden;
   height: 120px;
+  color: white;
+  background: url(../img/face.png) darken($color-primary, 20%) no-repeat top right 20px;
+  .page-title {
+    display: block;
+    width: 50%;
+    margin: 0 auto;
+    line-height: 120px;
+    font-weight: 700;
+    font-size: 48px;
+    text-transform: lowercase;
+    float: left;
+  }
+  &.header-projetos {
+    background-color: darken($color-secondary, 10%);
+  }
+  &.header-blog {
+    background-color: darken($color-tertiary, 10%);
+  }
 }
 
 @media screen and (max-width: 767px){
   #header { margin-bottom: 40px; }
+  #header:not(.header-home) { 
+    height: 60px;
+    background-size: auto 60px;
+    .page-title {
+      line-height: 60px;
+      font-size: 32px;
+    }
+  }
+}
+
+@media screen and (max-width: 479px){
+  #header:not(.header-home) { 
+    background-position: top right -50px;
+    .page-title { font-size: 24px; }
+    .container {
+      padding: 0 0;
+    }
+  }
 }

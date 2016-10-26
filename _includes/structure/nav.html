@@ -7,8 +7,8 @@
       <nav class="menu">
         <ul class="toplinks">
           <li><a href="{{ site.url }}" title="Home">Ogilvieira</a></li>
-          <li><a href="{{ "/blog" | prepend: site.baseurl }}">Blog</a></li>
-          <li><a href="{{ "/projects" | prepend: site.baseurl }}">Projetos</a></li>
+          <li><a href="{{ "/blog" | prepend: site.baseurl }}" {% if page.domain == 'blog' %}class="active"{% endif %}>Blog</a></li>
+          <li><a href="{{ "/projetos" | prepend: site.baseurl }}" {% if page.domain == 'projetos' %}class="active"{% endif %}>Projetos</a></li>
           <li><a href="https://medium.com/@ogilvieira/latest" target="_blank">Medium</a></li>
         </ul>
         <ul class="social">
