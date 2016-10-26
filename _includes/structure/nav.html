@@ -2,13 +2,13 @@
 <aside id="nav">
   <div class="container">
     <div class="col-lg-12">
-      <a href="#" class="brand">Gil Vieira</a>
+      <a href="{{ site.url }}" class="brand">Gil Vieira</a>
       <button class="btn-menu hidden-sm hidden-md hidden-lg">M</button>
       <nav class="menu">
         <ul class="toplinks">
-          <li><a href="./" title="Home">Ogilvieira</a></li>
-          <li><a href="./blog">Blog</a></li>
-          <li><a href="./projetos">Projetos</a></li>
+          <li><a href="{{ site.url }}" title="Home">Ogilvieira</a></li>
+          <li><a href="{{ "/blog" | prepend: site.baseurl }}">Blog</a></li>
+          <li><a href="{{ "/projects" | prepend: site.baseurl }}">Projetos</a></li>
           <li><a href="https://medium.com/@ogilvieira/latest" target="_blank">Medium</a></li>
         </ul>
         <ul class="social">
