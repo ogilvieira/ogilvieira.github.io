@@ -25,13 +25,13 @@ module.exports = function(grunt) {
       },
       build: {
         src: javascript,
-        dest: './_site/assets/js/app.min.js'
+        dest: '_site/assets/js/app.min.js'
       },
     },
     cssmin : {
       options : {
         keepSpecialComments: 0,
-        rebase: true,
+        rebase: false,
         banner: '/*===================================================== \n'
                 +'= <%= pkg.siteName %> \n'
                 +'= by <%= pkg.author %> \n'
@@ -40,15 +40,16 @@ module.exports = function(grunt) {
       },
       dist: {
         src: stylesheet,
-        dest: './_site/assets/css/app.min.css',
+        dest: '_site/assets/css/app.min.css',
       }
     },
-    imagemin: {                          // Task
-      dynamic: {                         // Another target
+    imagemin: {
+      dynamic: {
         files: [{
-          expand: true,                  // Enable dynamic expansion
-          cwd: '_site/assets/img/',                   // Src matches are relative to this path
-          src: ['**/*.{png,jpg,gif}']   // Actual patterns to match
+          expand: true,
+          cwd: '_site/assets/img/',
+          src: ['**/*.{png,jpg,gif}']
+          dest: "_site/"
         }]
       }
     },

@@ -37,4 +37,3 @@ exclude:
 # Sass configuration
 sass:
   sass_dir: assets/css/
-  style: compressed
