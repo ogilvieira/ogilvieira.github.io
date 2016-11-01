@@ -4,6 +4,7 @@
   text-align: right;
   font-size: 10px;
   background: url(../img/header.jpg) darken($color-primary, 20%) no-repeat;
+  background-attachment: fixed;
   h1 {
     font-size: 13.5em;
     line-height: 1;

@@ -1,4 +1,11 @@
 #content {
   width: 100%;
+  background: #eaeaea;
   @include clearfix();
+  margin-bottom: 123px;
+}
+
+
+@media screen and (max-width: 991px){
+  #content { margin-bottom: 72px; }
 }
