@@ -86,6 +86,7 @@
         background: $color-secondary;
         border-radius: 100%;
         color: white;
+        font-size: 18px;
         &:hover {
           background: darken($color-secondary, 10%);
         }
