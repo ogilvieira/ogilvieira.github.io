@@ -1,0 +1,146 @@
+#header {
+  width: 100%;
+  background: $color-one;
+  @include background-image( linear-gradient(to right, $color-one, lighten($color-one, 10%)) );
+  padding: 0 auto;
+  @include clearfix();
+  height: 60px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  .brand {
+    font-family: $font-primary;
+    display: inline-block;
+    height: 40px;
+    margin: 10px 0;
+    text-transform: uppercase;
+    font-weight: 700;
+    // line-height: 40px;
+    color: $color-two;
+    text-decoration: none;
+    user-select: none;
+    .icon, .brandname {
+      font-size: 23px;
+      line-height: 40px;
+    }
+    .icon {
+      float: left;
+      display: inline-block;
+      height: 40px;
+      font-size: 32px;
+      line-height: 1.6em;
+      margin-right: 2px;
+      color: $color-three;
+    }
+  }
+  .btn-menu {
+    margin: 0 auto;
+    border-radius: 0;
+    color: white;
+    // background: $color-three;
+    width: 50px;
+    background: rgba(0,0,0,.3);
+    font-size: 32px;
+    padding: 0 12px;
+    height: 60px;
+    position: fixed;
+    right: 0;
+    top: 0;
+    display: none;
+    outline: none;
+  }
+  nav {
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      text-align: right;
+      display: table;
+      height: 60px;
+      float: right;
+      li {
+        vertical-align: middle;
+        display: table-cell;
+        a {
+          display: block;
+          margin-right: 30px;
+          color: white;
+          text-transform: uppercase;
+          font-weight: bold;
+          position: relative;
+          &:after {
+            content: "";
+            display: block;
+            height: 3px;
+            width: 40%;
+            background: $color-three;
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            @include transition(.1s all linear);
+          }
+          &:hover {
+            text-decoration: none;
+            &:after { width: 100%; }
+          }
+        }
+        &:last-child a { margin-right: 0; }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #header .brand .brandname .h {
+  // #header nav ul {
+    display: none;
+  }
+  #header nav ul {
+    width: 100%;
+    height: calc(100% - 60px);
+    background: darken($color-one, 10%);
+    position: fixed;
+    top: 60px;
+    left: 0;
+    text-align: right;
+    overflow: auto;
+    display: block;
+    @include transform(translate(0, 100%));
+    @include transition(.2s all linear);
+    li {
+      display: block;
+      width: 100%;
+      a {
+        margin: 0;
+        padding: 15px;
+        font-size: 24px;
+        border-bottom: 10px solid rgba(0,0,0,.2);
+        &:after {
+          content: "";
+          display: inline-block;
+          width: 10px;
+          height: 10px;
+          background: $color-three;
+          left: auto;
+          bottom: auto;
+          position: static;
+          border-radius: 50%;
+          margin-left: 10px;
+        }
+        &:hover:after {
+          width: 10px;
+          // height: 10px;
+        }
+      }
+    }
+  }
+
+  #header nav.is-active ul {
+    @include transform(translate(0, 0));
+  }
+
+  #header .btn-menu {
+    display: block;
+  }
+}
